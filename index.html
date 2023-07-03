@@ -1,1 +1,72 @@
-theme: CoralFramework
+<!DOCTYPE html>
+<html>
+<!--头部-->
+ <head>
+  <title>axlotol-AnosnFire(Nahida)</title>
+ </head>
+
+ <body>
+    <!--第一个投稿-->
+     <h1 style="color: azure;">从这里开始</h1>
+     <h4 style="color: azure;">Time 2023/07/03 Writer:Nahida(AnsonFire)</h4>
+     <p style="color: azure;">这里就作为新的Blog,就从这里开始吧。我们不断进步，就是为了一个新的天地。</p>
+     <p style="color: azure;">我想，我应该不需要向您阐述过多的的话，您仅需在这里享受即可。</p>
+     <!--签名-->
+     <p style="color: aqua;">本次汇报 ：axlotol-AnosnFire/Nahida</p> 
+     <p style="color: aqua;">作者>>>> <img src="https://img1.imgtp.com/2023/07/03/91h0x7cw.png"  alt="作者的头像啦，没什么好看的....对吧？" width="31" height="30">
+     <p style="color: aqua;">传送门（作者KLP主页）https://klpbbs.com/space-uid-760616.html</p>
+     
+     <!--分割线-->
+     <p></p><br>
+     <p></p><br>
+     <p></p><br>
+
+    <!--Kernel23的汇报-->
+      <h1 style="color: azure;">Kernel-23报告</h1>
+    <!--基础信息-->
+     <h4 style="color: azure;">Time 2023/07/01 Writer: Nahida(AnsonFire)</h4> 
+    <!--图床-->
+      <img src="https://img1.imgtp.com/2023/07/03/YyEGRCMw.png" alt="Kernel-23报告" width="1024" height="715">
+     <!--正文-->
+     
+      <p style="color: azure;">从今日开始正式开发kernel23的实验性版本，正式版会在2023.12.20发布。</p>
+
+      <h2 style="color: azure;">您需要知晓：</h2>
+     
+      <p style="color: azure;">1、由于是实验性版本，我们在内核中内嵌dialog以及Unified Log Upload Service。您需要将搭载的程序加入WDF（Windows Defender Firewall）白名单。否则会被系统禁止运行。</p>
+      <p style="color: azure;">1.1、您可以在config.ini(Windows)中，在“telemetry”下您可以看到注释下有三个选项：“full”，“tiny”和“close”。对应的选项是“完全”“部分”以及“关闭”。经过测试dialog不会产生性能问题，但是会额外开启dialog进程，并占用13.23MB～20.898MB的运行内存。最高处理器占用0.23％，网络占用1.23％（根据网卡性能、网络带宽的问题，此数值可能会在1.098％～2.123％波动）</p>
+      <p style="color: azure;">1.2、日志收集情况</p>
+        <p style="color: azure;">“完整”：运行时间、运行内存、运行内存使用情况、客户端名称、制造商、屏幕快照、内存快照、应用目录快照、以及AFOSP规定的日志收集范围。</p>
+        <p style="color: azure;">“部分”：仅AFOSP规定的日志收集范围。</p>
+        <p style="color: azure;">“关闭”：不收集日志。</p>
+     <p style="color: azure;">2、您必须对您的使用负责，如果您以任何形式传播实验性版本的内容，请注意添加AFOSP的字样，必须足够显眼，否则给予警告。</p>
+     <p style="color: azure;">3、您不能去除应用左下角的水印，因为这是您调试的唯一信息。</p>
+     
+     <h2 style="color: azure;">新特性:</h2>
+     <p style="color: azure;">这一次，我们着中“安全”和“技术”，“安全”是一切的基石，没有安全一切就不会建立，相比于kernel22，虽没有最新的功能，但是相比于kernel22，安全性提高了89.976%（在AFOSP指定的沙盒环境下）。而“技术”是创新的开始永不停止。</p>    
+     <h3 style="color: azure;">安全性</h3>
+     <p style="color: azure;">1、现在内核配置文件默认禁止“符号链接”。以便确保不会加载恶意的文件。<br>
+        2、现在内核以及其他进程只会运行在沙盒环境中，因为时间问题，此功能可能只包含在正式版中或者推迟到kernel24。“沙盒环境”是一个新的环境，可以使内核以及重要文件运行在受保护的环境之中，而不是公用环境。但是此功能依旧需要讨论（因为此功能可能会封闭内核，导致内核进程优先级大于程序本体，出现权限以及内存安全问题）。<br>
+        3、现在内核的大小变为12.98MB是因为集成了更多重要功能，减少其他文件的体积（减少1.329MB）。<br>
+        </p>
+    <h3 style="color: azure;">安全性【需要开启“内核高级安全实验”】</h3>
+    <p style="color: azure;"> 4、新增“本地文件强制签名策略”，要求所有附加文件具有可信的签名或者证书豁免。<br>
+        5、新增“进程加密独立”，会将内核进程强制加密，并且使用独立的进程范围。<br>
+        6、新增“增强的本地文件安全策略”，注意：此操作会禁止本地文件（目录下）通过任何形式调用目录外的任何文件。<br>
+        </p>
+    <!--Writer-->
+    <p style="color: aqua;">本次汇报 ：axlotol-AnosnFire/Nahida</p> 
+    <p style="color: aqua;">作者>>>> <img src="https://img1.imgtp.com/2023/07/03/91h0x7cw.png"  alt="作者的头像啦，没什么好看的....对吧？" width="31" height="30">
+    <p style="color: aqua;">传送门（作者KLP主页）https://klpbbs.com/space-uid-760616.html</p>
+
+
+
+     <style>
+        body
+        {
+         background-image: url(https://img1.imgtp.com/2023/07/03/HDBz1AcQ.png);
+        }
+</style>
+  </body>
+
+ </html>
